@@ -27,8 +27,7 @@ points = np.hstack((points_xs, points_ys))
 
 
 test_point = (400, 300)
-cv2.circle(frame, test_point, 15, (255, 255, 255), -1)
-
+cv2.circle(frame, test_point, 10, (247, 244, 20), -1)
 
 for pt in points:
     color = (3, 161, 252)
