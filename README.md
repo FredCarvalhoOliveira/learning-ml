@@ -16,6 +16,7 @@ As I learn I'll try to create quality notes, examples and visualizations to help
 - [Natural Language Processing](#nlp)
 - [Tabular](#tab)
 - [Time Series](#ts)
+- [ML Strategy](#strat)
 
 
 
@@ -53,3 +54,38 @@ As I learn I'll try to create quality notes, examples and visualizations to help
 
 ## Natural Language Processing
 - TODO
+
+<a name="strat" />
+
+## ML Strategy
+
+### Orthogonalization
+Orthogonalization is a system design property that ensures that modification of an instruction or an algorithm component does not create or propagate side effects to other system components.
+Orthogonalization makes it easier to independently verify the algorithms, thus reducing the time required for testing and development.
+
+In the development of machine learning system one common problem is dealing with the vast amount of tuneable parameters to achieve a desired result.
+
+Orthogonalization in ML is the process of choosing and tuning parameters that represent a dimension of what we want to achieve, orthogonal parameters should be tuned first
+
+### Chain of assumptions in ML
+ 
+#### 1. Fit training set well on cost function
+- **If unsuccessful:**
+  - Bigger Model 
+  - Different optimizer 
+
+#### 2. Fit dev set well on cost function
+- **If unsuccessful:**
+  - Regularization 
+  - Increase training set size
+
+#### 3. Fit test set well on cost function
+- **If unsuccessful:**
+  - Increase dev set size
+
+#### 4. Performs well on real world
+- **If unsuccessful:**
+  - Change test set, as it might not represent the real world scenario
+  - Change cost function, as it might not be evaluation the right thing
+  
+
